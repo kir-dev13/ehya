@@ -1,6 +1,6 @@
 // ПЕРЕМЕННЫЕ
 
-let project_folder = require("path").basename(__dirname);
+let project_folder = "dist";
 let source_folder = "#src";
 let fs = require("fs");
 
