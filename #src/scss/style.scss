@@ -12,6 +12,10 @@
 @import "_fonts";
 @import "_nullstyle";
 
-body {
-  box-sizing: border-box;
-}
+@import "_variables.sass";
+
+@import "_manual.sass";
+@import "media/_manual.sass";
+
+@import "blocks/_header.sass";
+@import "media/_header.sass";
