@@ -1,16 +1,18 @@
 .header
-    border: 1px solid tomato
+    width: 100%
     padding: 26px 0 26px
-    padding-left: 70 / 1280 * 100%
-    padding-right: 70 / 1280 * 100%
+    padding-left: 150 / 1280 * 100%
+    padding-right: 150 / 1280 * 100%
     display: flex
     justify-content: space-between
     align-items: center
     // flex-wrap: wrap
+    background-color: #fff
     .logo-block
         padding-right: 40 / 1280 * 100%
         // padding-top: 10px
 .nav
+    // background-color: #fff
     display: flex
     flex-grow: 1
     align-items: center
@@ -35,14 +37,19 @@
         font-size: 16px
         line-height: 22px
         color: #183B56
+        &:hover
+            color: lighten($btnPrimary, 50%)
     &__btn
         font-weight: bold
         margin-left: 30px
         padding: 13px 24px
         background-color: #fff
+        color: #1565D8
         border: 2px solid #1565D8
-        // filter: drop-shadow(0px 10px 25px rgba(21, 37, 72, 0.1))
-        border-radius: 8px
+        filter: drop-shadow(0px 10px 25px rgba(21, 37, 72, 0.1))
+        &:hover
+            color: lighten(#1565D8, 20%)
+            border-color: lighten(#1565D8, 10%)
 .mobile-btn
     width: 24px
     height: 24px
