@@ -1,0 +1,77 @@
+@media (max-width: 1200px)
+    .collection
+        &__img
+        &__text-wrapper
+
+        // margin-top: 20px
+        &__title
+            font-size: 36px
+            margin-bottom: 15px
+            line-height: 46px
+            letter-spacing: 0.2px
+        &__text
+            font-size: 16px
+            line-height: 30px
+        &__link
+@media (max-width: 1040px)
+    .collection
+        &__img
+            &-wrapper
+                &--big
+                    margin-right: 20px
+                &--small
+                    margin-right: 15px
+            &-block
+                &:nth-child(1)
+                    margin-bottom: 20px
+                // flex-direction: column
+                // flex-basis: 30%
+            &__text-wrapper
+                flex-basis: 30%
+@media (max-width: 960px)
+    .collection
+        margin-top: 80px
+        &-wrapper
+            flex-direction: column
+        &__img
+            &-wrapper
+                justify-content: space-around
+                margin-bottom: 40px
+                &--big
+                    // margin-right: 20px
+                &--small
+                    // margin-right: 15px
+                    justify-content: space-between
+            &-block
+                &:nth-child(1)
+                    margin-bottom: 0
+@media (max-width: 768px)
+    .collection
+        &-wrapper
+        &__img
+            &-wrapper
+                justify-content: space-between
+
+        &__text-wrapper
+        // margin-top: 20px
+        &__title
+@media (max-width: 490px)
+    .collection
+        margin-top: 64px
+        &__img
+            &-wrapper
+                flex-basis: 50%
+                flex-direction: column
+                &--big
+                    // height: 100px
+                    margin-right: 0
+                    // flex-basis: 10%
+                    margin-bottom: 14px
+                &--small
+                    margin-right: 0
+                    flex-direction: row
+                    justify-content: space-between
+            &-block
+                &:nth-child(2)
+                    margin-left: 15px
+                    // border: 1px solid red
