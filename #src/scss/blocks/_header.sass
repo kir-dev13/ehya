@@ -1,8 +1,10 @@
 .header
     width: 100%
-    padding: 26px 0 26px
-    padding-left: 150 / 1280 * 100%
-    padding-right: 150 / 1280 * 100%
+
+    // padding: 26px 0 26px
+    height: 100px
+    padding-left: 150px
+    padding-right: 150px
     display: flex
     justify-content: space-between
     align-items: center
@@ -27,6 +29,7 @@
         max-width: 590px
     &__item
         // padding: 0 20px
+        // margin-right: 40px
         &:nth-child(1)
             padding-left: 0
         // margin-left: 40px
@@ -40,9 +43,10 @@
         &:hover
             color: lighten($btnPrimary, 50%)
     &__btn
+        max-width: 101px
         font-weight: bold
-        margin-left: 30px
-        padding: 13px 24px
+        margin-left: 10px
+        padding: 13px 22px
         background-color: #fff
         color: #1565D8
         border: 2px solid #1565D8
