@@ -136,6 +136,9 @@ h6 {
   font-weight: bold;
   font-size: 48px;
   line-height: 60px;
+  -webkit-font-feature-settings: "locl" 0;
+          font-feature-settings: "locl" 0;
+  color: #183B56;
 }
 
 .link {
@@ -241,10 +244,9 @@ h6 {
 }
 
 .nav__btn {
-  max-width: 101px;
   font-weight: bold;
   margin-left: 10px;
-  padding: 13px 22px;
+  padding: 13px 20px;
   background-color: #fff;
   color: #1565D8;
   border: 2px solid #1565D8;
@@ -311,13 +313,9 @@ h6 {
 }
 
 .main__title {
-  font-family: "HK Grotesk";
-  font-style: normal;
-  font-weight: bold;
   font-size: 56px;
   line-height: 68px;
   letter-spacing: 0.2px;
-  color: #183B56;
   margin-bottom: 28px;
 }
 
@@ -446,13 +444,9 @@ h6 {
 }
 
 .collection__title {
-  font-family: HK Grotesk;
-  font-style: normal;
-  font-weight: bold;
   font-size: 48px;
   line-height: 60px;
   letter-spacing: 0.2px;
-  color: #183B56;
   margin-bottom: 24px;
 }
 
@@ -567,6 +561,8 @@ h6 {
   color: #183B56;
   display: block;
   margin-top: 20px;
+  -webkit-font-feature-settings: "locl" 0;
+          font-feature-settings: "locl" 0;
 }
 
 .card__info {
