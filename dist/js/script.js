@@ -45,9 +45,9 @@ var sliderReviews = new Swiper(".reviews__swiper-container", {
   loop: true,
   //   setWrapperSize: true,
   //   autoHeight: true,
-  autoplay: {
-    delay: 7000,
-  },
+  //   autoplay: {
+  //     delay: 7000,
+  //   },
   disableOnInteraction: true,
   // If we need pagination
   pagination: {

@@ -289,7 +289,7 @@ h6 {
   background-image: url(../img/main-background.png); }
 
 .main {
-  margin-top: 90px;
+  margin-top: 87px;
   background-size: cover;
   background-position: top;
   background-repeat: no-repeat;
@@ -375,6 +375,12 @@ h6 {
   margin-right: 8px;
   border: 0.75px solid #1565D8;
   border-radius: 12px;
+}
+
+.main__advantage {
+  font-family: HK Grotesk;
+  -webkit-font-feature-settings: "locl" 0;
+          font-feature-settings: "locl" 0;
 }
 
 .collection {
@@ -627,6 +633,57 @@ h6 {
      object-fit: contain;
 }
 
+.blue-card {
+  background: #1565D8;
+  border-radius: 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 28px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  overflow: hidden;
+}
+
+.blue-card:hover {
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  background-color: #639df0;
+}
+
+.blue-card img {
+  width: 28px;
+  margin-bottom: 25px;
+}
+
+.blue-card span {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 32px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  -webkit-font-feature-settings: "locl" 0;
+          font-feature-settings: "locl" 0;
+}
+
+.more-collection {
+  overflow: hidden;
+}
+
 .reviews {
   margin-top: 100px;
 }
@@ -784,27 +841,30 @@ h6 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .history__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.history__item:nth-child(1) {
+  border: 1px solid red;
   margin-right: 28px;
 }
 
 .history__i {
   width: 100%;
   height: 100%;
-  border: 1px solid red;
 }
 
 .history__image-block {
   border-radius: 8px;
-  min-width: 317px;
+  max-width: 317px;
   min-height: 312px;
   overflow: hidden;
 }
@@ -857,6 +917,40 @@ h6 {
   .collection__img__text-wrapper {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
+  }
+}
+
+@media (max-width: 992px) {
+  a:hover,
+  .btn:hover {
+    cursor: default;
+  }
+
+  .link:hover {
+    color: #1565D8;
+  }
+
+  .btn-primary:hover {
+    background-color: #183B56;
+  }
+
+  .nav__link:hover {
+    color: #183B56;
+  }
+
+  .nav__btn:hover {
+    color: #1565D8;
+    border-color: #1565D8;
+  }
+
+  .card__image-block:hover {
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+  }
+
+  .trends__menu-item {
+    cursor: default;
   }
 }
 
@@ -926,7 +1020,7 @@ h6 {
   }
 
   .card__image-block {
-    height: 300px;
+    height: 350px;
   }
 }
 
@@ -1008,6 +1102,15 @@ h6 {
   .mobile-btn {
     display: block;
   }
+
+  .no-webp .main{
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(220, 219, 217, 0)), to(#dcdbd9)), url(../img/main-background.png); }
+
+  .no-webp .main{
+    background-image: -o-linear-gradient(top, rgba(220, 219, 217, 0), #dcdbd9), url(../img/main-background.png); }
+
+  .no-webp .main{
+    background-image: linear-gradient(to bottom, rgba(220, 219, 217, 0), #dcdbd9), url(../img/main-background.png); }
 
   .main {
     margin-top: 100px;
@@ -1116,7 +1219,7 @@ h6 {
   }
 
   .card__image-block {
-    height: 300px;
+    height: 350px;
   }
 }
 
@@ -1149,6 +1252,18 @@ h6 {
     margin-right: 10px;
   }
 
+  .main__ico {
+    width: 14px;
+    height: 14px;
+  }
+
+  .main__ico-block {
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 8px;
+    padding-bottom: 3px;
+  }
+
   .collection__text {
     font-size: 18px;
     line-height: 32px;
@@ -1170,6 +1285,7 @@ h6 {
     background-image: linear-gradient(to bottom, rgba(220, 219, 217, 0), #dcdbd9), url(../img/main-background.png); }
 
   .main {
+    background-size: 400%;
     width: 100%;
   }
 
@@ -1182,7 +1298,7 @@ h6 {
   }
 
   .main__title {
-    max-width: 80%;
+    max-width: 85%;
     text-align: center;
   }
 
@@ -1199,11 +1315,12 @@ h6 {
   }
 
   .main__list {
+    margin-left: 18px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 
   .main__item {
@@ -1212,12 +1329,14 @@ h6 {
   }
 
   .main__item:nth-child(3) {
+    margin: auto;
     margin-top: 18px;
   }
 
   .main__ico {
     width: 14px;
     height: 14px;
+    vertical-align: middle;
   }
 
   .main__ico-block {
@@ -1267,6 +1386,16 @@ h6 {
   .collection__title {
     font-size: 40px;
     line-height: 50px;
+  }
+
+  .blue-card img {
+    width: 25px;
+    margin-bottom: 15px;
+  }
+
+  .blue-card span {
+    font-size: 17px;
+    line-height: 20px;
   }
 
   .card__image {
@@ -1409,8 +1538,8 @@ h6 {
   }
 
   .card__image {
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: scale-down;
+       object-fit: scale-down;
     -o-object-position: center 0;
        object-position: center 0;
   }
@@ -1448,6 +1577,21 @@ h6 {
 }
 
 .webp .main{ background-image: url(../img/main-background.webp); }
+
+@media (max-width: 768px){
+
+  .webp .main{ background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(220, 219, 217, 0)), to(#dcdbd9)), url(../img/main-background.webp); }
+}
+
+@media (max-width: 768px){
+
+  .webp .main{ background-image: -o-linear-gradient(top, rgba(220, 219, 217, 0), #dcdbd9), url(../img/main-background.webp); }
+}
+
+@media (max-width: 768px){
+
+  .webp .main{ background-image: linear-gradient(to bottom, rgba(220, 219, 217, 0), #dcdbd9), url(../img/main-background.webp); }
+}
 
 @media (max-width: 470px){
 

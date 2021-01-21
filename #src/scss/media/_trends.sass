@@ -1,9 +1,19 @@
+@media (max-width: 992px)
+    .card
+        &__image
+            &-block
+                &:hover
+                    transform: none
+    .trends
+        &__menu
+            &-item
+                cursor: default
 @media (max-width: 960px)
     .card
         &__image
             height: 100%
             &-block
-                height: 300px
+                height: 350px
 
 @media (max-width: 768px)
     .trends
@@ -28,9 +38,16 @@
             object-fit: cover
             object-position: 100% 0%
             &-block
-                height: 300px
+                height: 350px
 
 @media (max-width: 470px)
+    .blue-card
+        img
+            width: 25px
+            margin-bottom: 15px
+        span
+            font-size: 17px
+            line-height: 20px
     .card
         &__image
             object-fit: cover
@@ -57,7 +74,7 @@
             margin-bottom: 22px
     .card
         &__image
-            object-fit: cover
+            object-fit: scale-down
             object-position: center 0
             &-block
                 height: 170px
