@@ -167,11 +167,16 @@ h6 {
 }
 
 .hashtag {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
   background: rgba(54, 179, 126, 0.1);
   border-radius: 2000px;
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
+  text-align: center;
   color: #36B37E;
 }
 
@@ -550,6 +555,8 @@ h6 {
   width: 100%;
   height: 100%;
   scale: 1;
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 .card__image-block {
@@ -618,6 +625,188 @@ h6 {
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.reviews {
+  margin-top: 100px;
+}
+
+.reviews__image-block {
+  text-align: center;
+  margin: auto;
+  margin-bottom: 35px;
+}
+
+.reviews-wrapper {
+  height: 100%;
+}
+
+.reviews__swiper-container {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.reviews__swiper-slide {
+  padding: 0 320px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reviews__text {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.133333px;
+  color: #183B56;
+  -webkit-font-feature-settings: "locl" 0;
+          font-feature-settings: "locl" 0;
+}
+
+.reviews__author {
+  font-family: HK Grotesk;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+  letter-spacing: 0.2px;
+  color: #183B56;
+  -webkit-font-feature-settings: "locl" 0;
+          font-feature-settings: "locl" 0;
+  margin-top: 28px;
+  margin-bottom: 68px;
+}
+
+.reviews__swiper-pagination {
+  width: 47px;
+}
+
+.history {
+  margin-top: 58px;
+}
+
+.history-wrapper {
+  border-top: 1px solid #E5EAF4;
+  padding-top: 131px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.history__sentence {
+  margin-left: -5px;
+  max-width: 470px;
+  padding-right: 90px;
+  margin-right: 10px;
+}
+
+.history__hashtag {
+  max-width: 102px;
+  padding: 6px 16px;
+  margin-bottom: 28px;
+}
+
+.history__title {
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: 0.2px;
+  margin-bottom: 24px;
+}
+
+.history__text {
+  font-size: 20px;
+  line-height: 36px;
+  color: #5A7184;
+}
+
+.history__slider-button {
+  display: inline-block;
+  border: 2px solid;
+  border-radius: 2000px;
+  padding: 20px;
+  margin-right: 18px;
+  margin-top: 46px;
+}
+
+.history__slider-button-prev {
+  -webkit-transform: scale(-1, 1);
+      -ms-transform: scale(-1, 1);
+          transform: scale(-1, 1);
+}
+
+.history__slider-button--disabled {
+  border-color: #959EAD;
+  -webkit-filter: opacity(50%);
+          filter: opacity(50%);
+}
+
+.history__slider-button:hover {
+  cursor: pointer;
+}
+
+.history__swiper-container {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.history__swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.history__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 28px;
+}
+
+.history__i {
+  width: 100%;
+  height: 100%;
+  border: 1px solid red;
+}
+
+.history__image-block {
+  border-radius: 8px;
+  min-width: 317px;
+  min-height: 312px;
+  overflow: hidden;
 }
 
 @media (max-width: 1200px) {
