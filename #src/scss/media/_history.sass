@@ -1,0 +1,105 @@
+@media (max-width: 1200px)
+    .history
+        &__sentence
+            padding-right: 0
+        // &__item
+        //     &-block
+        //         padding-right: 13px
+@media (max-width: 992px)
+    .history
+        &-wrapper
+            flex-direction: column
+            align-items: center
+        &__sentence
+            display: flex
+            align-items: center
+            flex-direction: column
+            text-align: center
+            margin-left: 0
+            margin-right: 0
+            width: 100%
+            max-width: 100%
+        &__title
+            margin-bottom: 15px
+        &__text
+            padding: 0 50px
+        &__slider-button
+            margin-top: 30px
+            margin-right: 5px
+            &-next
+                margin-left: 15px
+            &:hover
+                cursor: default
+        &__swiper-container
+            margin-top: 40px
+        &__swiper-slide
+            width: 100%
+        &__item
+            &:nth-child(1)
+                // margin-right: 10px
+            &-block
+                padding-right: 47px
+@media (max-width: 768px)
+    .history
+        margin-top: 65px
+        &-wrapper
+            padding-top: 80px
+        &__sentence
+        &__title
+@media (max-width: 576px)
+    .history
+        &__swiper-slide
+            flex-direction: column
+            align-items: center
+        &__item
+            margin-bottom: 20px
+            &:nth-child(1)
+                margin-right: 0
+        &__image-block
+            max-width: 100%
+            max-height: 317px
+        &__i
+            object-fit: fill
+@media (max-width: 470px)
+    .history
+        &__title
+            font-size: 28px
+            line-height: 36px
+        &__text
+            font-size: 18px
+            line-height: 28px
+
+@media (max-width: 390px)
+    .history
+        margin-top: 15px
+        &__hashtag
+            margin-bottom: 20px
+        &__hidden
+            display: none
+        &__text
+            font-size: 16px
+            padding: 0 10px
+            margin-bottom: 0
+        &__slider-button
+            margin-top: 35px
+            margin-right: 0
+            padding: 15px
+            &-next
+                margin-left: 10px
+        &__swiper-container
+            margin-top: 27px
+        &__item
+            min-height: 0
+            margin-bottom: 42px
+            &-text
+                font-size: 20px
+                line-height: 24px
+            &-block
+                padding-right: 20px
+        &__link
+        &__image
+            &-block
+                border-radius: 8px
+                max-width: 270px
+                height: 277px
+                overflow: hidden
