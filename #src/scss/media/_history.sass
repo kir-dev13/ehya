@@ -23,6 +23,8 @@
             margin-bottom: 15px
         &__text
             padding: 0 50px
+        &__swiper-slide
+            justify-content: space-evenly
         &__slider-button
             margin-top: 30px
             margin-right: 5px
@@ -39,13 +41,24 @@
                 // margin-right: 10px
             &-block
                 padding-right: 47px
+                justify-content: start
 @media (max-width: 768px)
     .history
         margin-top: 65px
         &-wrapper
             padding-top: 80px
+        &__swiper-slide
+            justify-content: space-between
         &__sentence
         &__title
+        &__item
+            &-block
+                padding-left: 10px
+                padding-top: 25px
+                // padding-bottom: 80px
+                // justify-content: space-between
+        &__link
+
 @media (max-width: 576px)
     .history
         &__swiper-slide
@@ -53,13 +66,17 @@
             align-items: center
         &__item
             margin-bottom: 20px
+            // align-items: center
             &:nth-child(1)
                 margin-right: 0
         &__image-block
-            max-width: 100%
+            // max-width: 100%
+            // margin-left: auto
+            // margin-right: auto
             max-height: 317px
         &__i
-            object-fit: fill
+            // object-fit: contain
+            margin: auto
 @media (max-width: 470px)
     .history
         &__title
@@ -71,12 +88,17 @@
 
 @media (max-width: 390px)
     .history
-        margin-top: 15px
+        margin-top: 55px
+        &-wrapper
+            padding-top: 45px
         &__hashtag
-            margin-bottom: 20px
+            max-width: 94px
+            padding: 2px 12px
+            margin-bottom: 25px
         &__hidden
             display: none
         &__text
+
             font-size: 16px
             padding: 0 10px
             margin-bottom: 0
@@ -90,16 +112,20 @@
             margin-top: 27px
         &__item
             min-height: 0
-            margin-bottom: 42px
+            margin-bottom: 30px
             &-text
+                margin-bottom: 17px
                 font-size: 20px
                 line-height: 24px
             &-block
+                padding-top: 18px
+                padding-left: 20px
                 padding-right: 20px
         &__link
+            // margin-bottom: 10px
         &__image
             &-block
-                border-radius: 8px
+                // width: 82%
                 max-width: 270px
                 height: 277px
                 overflow: hidden
