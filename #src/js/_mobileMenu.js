@@ -13,20 +13,13 @@ buttonMobileMenu.addEventListener("click", function () {
 });
 
 navbarCloseButton.addEventListener("click", mobileMenuClose);
-
-// document.addEventListener("click", (e) => {
-//   let target = e.target;
-//   let its_menu = target == navbarMenu || navbarMenu.contains(target);
-//   // let its_hamburger = target == hamburger;
-//   let menu_is_active = navbarMenu.classList.contains("active");
-//   if (!its_menu && menu_is_active) {
+// document.addEventListener("click", function (e) {
+//   const target = e.target;
+//   const itsMenu = target == navbarMenu || navbarMenu.contains(target);
+//   const menuIsActive = navbarMenu.classList.contains("nav--visible");
+//   if (!itsMenu && !buttonMobileMenu && menuIsActive) {
 //     console.log("click");
-//     mobileMenuClose();
-//   }
-// });
 
-// document.addEventListener("click", function (event) {
-//   let navbarMenuMobile = document.querySelector(".nav--visible");
-//   let choordsNavbar = navbarMenuMobile.getBoundingClientRect()
-//   if ()
+//     mobileMenuClose;
+//   }
 // });

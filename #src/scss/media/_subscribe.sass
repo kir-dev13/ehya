@@ -1,0 +1,112 @@
+@media ( max-width: 1200px )
+    .subscribe
+        &-wrapper
+            justify-content: space-between
+        &__form
+            flex-basis: 50%
+            margin-right: 0
+@media ( max-width: 992px )
+    .subscribe
+        margin-top: 5px
+        &:before
+            background-position: -150% 0
+            // transform: rotateX(30deg)
+            height: 100%
+        &:after
+            background-position: 400% 100px
+        &-wrapper
+            padding: 72px 0
+            flex-direction: column
+            justify-content: space-between
+            align-items: stretch
+            width: 67%
+            margin: auto
+        &__content
+            text-align: center
+            margin-bottom: 56px
+        &__title
+            margin-bottom: 14px
+        &__form
+            margin: auto
+            flex-basis: 80%
+            width: 100%
+@media ( max-width: 768px )
+    .subscribe
+        margin-top: 0
+        &:before
+            background-position: 0 top
+            background-size: cover
+        &-wrapper
+            width: 80%
+        &__content
+            flex-basis: 100%
+        &__text
+            margin: auto
+            width: 85%
+        &__form
+            margin: auto
+            flex-basis: 80%
+            width: 83%
+@media ( max-width: 734px )
+    .subscribe
+        &::after
+            background: none
+@media ( max-width: 576px )
+    .subscribe
+        &-wrapper
+            width: 100%
+        &__form
+            box-sizing: border-box
+            // height: 49px
+        &__input
+            &-group
+                height: 49px
+        &__mail-ico
+            top: 20%
+        &__btn
+            margin-top: 10px
+            width: 100%
+            position: relative
+@media ( max-width: 470px )
+    .subscribe
+        margin-top: 35px
+        &::before
+            background: none
+        &-wrapper
+            padding: 65px 0
+            justify-content: start
+        &__content
+            margin-bottom: 35px
+        &__title
+            font-size: 28px
+            line-height: 36px
+        &__text
+            width: 100%
+            font-size: 16px
+            line-height: 28px
+            margin-bottom: 0
+        &__form
+            width: 100%
+        &__btn
+            margin-top: 5px
+            width: 100%
+@media ( max-width: 390px )
+    .subscribe
+        &-wrapper
+            padding: 65px 0
+            justify-content: start
+        &__content
+            margin-bottom: 35px
+        &__title
+
+            margin-bottom: 25px
+        &__text
+            width: 100%
+            font-size: 16px
+            line-height: 28px
+            margin-bottom: 0
+        &__form
+            width: 100%
+        &__btn
+            margin-top: 5px
+            width: 100%
