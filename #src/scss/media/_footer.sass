@@ -1,0 +1,74 @@
+@media ( max-width: 1200px  )
+    .footer
+        &-wrapper
+            justify-content: space-between
+        &__social
+            flex-basis: 20%
+
+@media ( max-width: 992px  )
+    .footer
+        &-wrapper
+            padding: 64px 10px 130px
+            flex-wrap: wrap
+            // flex-basis: 100%
+            justify-content: flex-end
+        &__list
+            // width: 25%
+            flex-basis: 26%
+
+        &__social
+            flex-basis: 44%
+            justify-self: left
+            margin-right: auto
+        &__title
+            &--mt2
+                margin-top: 48px
+@media ( max-width: 768px  )
+    .footer
+        &-wrapper
+        &__list
+            // width: 25%
+            flex-basis: 27%
+
+        &__social
+            flex-basis: 40%
+            justify-self: left
+            // margin-right: 10px
+        &__title
+            &--mt2
+                margin-top: 22px
+@media ( max-width: 576px  )
+    .footer
+        &-wrapper
+            flex-direction: column
+        &__social
+            order: 1
+            align-items: center
+            &-text
+                text-align: center
+                font-size: 14px
+                line-height: 24px
+                margin-bottom: 20px
+
+@media ( max-width: 470px  )
+    .footer
+
+        &-wrapper
+            padding-top: 47px
+            padding-left: 20px
+        &__title
+            font-size: 16px
+            line-height: 22px
+            margin-bottom: 20px
+            &--mt2
+                margin-top: 0
+        &__list
+            margin-bottom: 10px
+        &__item
+            margin-bottom: 16px
+        &__link
+            font-size: 14px
+            line-height: 20px
+        &__logo
+            margin-top: 40px
+            margin-bottom: 15px
