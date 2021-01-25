@@ -123,11 +123,13 @@ h6 {
 .container {
   width: 88.88889%;
   margin: auto;
+  max-width: 1140px;
 }
 
 .container-2 {
   width: 79.16667%;
   margin: auto;
+  max-width: 1140px;
 }
 
 .title {
@@ -719,7 +721,7 @@ label.invalid {
 }
 
 .reviews__swiper-slide {
-  padding: 0 310px;
+  padding: 0 180px;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1263,6 +1265,7 @@ label.invalid {
 }
 
 .to-top {
+  display: block;
   -webkit-box-shadow: 0px 1px 120px 0 rgba(161, 161, 161, 0.08);
           box-shadow: 0px 1px 120px 0 rgba(161, 161, 161, 0.08);
   border-radius: 4px;
@@ -1270,7 +1273,7 @@ label.invalid {
   background-color: #fff;
   position: fixed;
   bottom: 6%;
-  right: 7%;
+  right: 12%;
   width: 50px;
   height: 50px;
   display: -webkit-box;
@@ -1283,6 +1286,10 @@ label.invalid {
       -ms-flex-align: center;
           align-items: center;
   z-index: 199;
+}
+
+.to-top-wrapper {
+  position: relative;
 }
 
 .to-top-image {
