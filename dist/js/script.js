@@ -17,19 +17,41 @@ testWebP(function (support) {
 });
 ;
 let navbarMenu = document.querySelector(".nav");
+
 let buttonMobileMenu = document.querySelector(".mobile-btn");
 let navbarCloseButton = document.querySelector(".nav__close");
+
+function mobileMenuOpen() {
+  navbarMenu.classList.add("nav--visible");
+  document.getElementsByTagName("body")[0].style.overflow = "hidden";
+  // let navbarMenuActive = document.querySelector(".nav--visible");
+  // onClickClose(navbarMenuActive);
+}
 
 function mobileMenuClose() {
   navbarMenu.classList.remove("nav--visible");
   document.getElementsByTagName("body")[0].style.overflow = "auto";
 }
 
-buttonMobileMenu.addEventListener("click", function () {
-  navbarMenu.classList.add("nav--visible");
-  document.getElementsByTagName("body")[0].style.overflow = "hidden";
-});
+// function onClickClose(elem) {
+//   function outsideClickListener(event) {
+//     if (!elem.contains(event.target) && isVisible(elem)) {
+//       // console.log(event);
+//       mobileMenuClose;
+//       document.removeEventListener("click", outsideClickListener);
+//     }
+//   }
+//   document.addEventListener("click", outsideClickListener);
+// }
 
+// function isVisible(elem) {
+//   return (
+// !!elem &&
+// !!(elem.offsetWidth || elem.offsetHeight || elem.getClientRects().length)
+//   );
+// }
+
+buttonMobileMenu.addEventListener("click", mobileMenuOpen);
 navbarCloseButton.addEventListener("click", mobileMenuClose);
 // document.addEventListener("click", function (e) {
 //   const target = e.target;
@@ -41,6 +63,19 @@ navbarCloseButton.addEventListener("click", mobileMenuClose);
 //     mobileMenuClose;
 //   }
 // });
+jQuery(function ($) {
+  $(document).mouseup(function (e) {
+    // событие клика по веб-документу
+    var div = $(".navbarMenu"); // тут указываем ID элемента
+    if (
+      !div.is(e.target) && // если клик был не по нашему блоку
+      div.has(e.target).length === 0
+    ) {
+      // и не по его дочерним элементам
+      mobileMenuClose(); // скрываем его
+    }
+  });
+});
 ;
 const inputButton = $(".nav__btn");
 const closeModalButton = $(".modal__close");
@@ -61,6 +96,13 @@ function closeModal() {
 
 inputButton.on("click", openModal);
 closeModalButton.on("click", closeModal);
+
+$(document).keyup(function (e) {
+  if (e.key === "Escape" && modalDialog.hasClass("modal__dialog--visible")) {
+    // escape key maps to keycode '27'
+    closeModal();
+  }
+});
 ;
 $(document).ready(function () {
   let tabsItem = $(".trends__menu-item");

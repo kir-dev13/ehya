@@ -12,9 +12,11 @@
             flex-wrap: wrap
             // flex-basis: 100%
             justify-content: flex-end
+        &__block
+            flex-basis: 26%
         &__list
             // width: 25%
-            flex-basis: 26%
+            // flex-basis: 26%
 
         &__social
             flex-basis: 44%
@@ -26,9 +28,11 @@
 @media ( max-width: 768px  )
     .footer
         &-wrapper
+        &__block
+            flex-basis: 27%
         &__list
             // width: 25%
-            flex-basis: 27%
+            // flex-basis: 27%
 
         &__social
             flex-basis: 40%
@@ -37,33 +41,54 @@
         &__title
             &--mt2
                 margin-top: 22px
+@media ( max-width: 680px  )    
+    .footer
+        &__block
+            flex-basis: 50%
+        &__social
+            text-align: center
+            order: 1
+            flex-basis: 100%
+            align-items: center
+            align-self: center
+            margin: auto
+            &-text
+                text-align: center
+                font-size: 14px
+                line-height: 24px
+                // margin-bottom: 40px
+            &-list
+                margin-top: 20px
+                margin-left: auto
+                margin-right: auto
 @media ( max-width: 576px  )
     .footer
         &-wrapper
             flex-direction: column
         &__social
+            
             order: 1
-            align-items: center
-            &-text
-                text-align: center
-                font-size: 14px
-                line-height: 24px
-                margin-bottom: 20px
+
 
 @media ( max-width: 470px  )
     .footer
-
+        padding-bottom: 30px
         &-wrapper
             padding-top: 47px
             padding-left: 20px
+            padding-bottom: 30px
         &__title
             font-size: 16px
             line-height: 22px
             margin-bottom: 20px
             &--mt2
                 margin-top: 0
-        &__list
+        &__block
             margin-bottom: 10px
+        &__social
+            flex-basis: 100%
+        &__list
+            // margin-bottom: 10px
         &__item
             margin-bottom: 16px
         &__link

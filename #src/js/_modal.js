@@ -17,3 +17,10 @@ function closeModal() {
 
 inputButton.on("click", openModal);
 closeModalButton.on("click", closeModal);
+
+$(document).keyup(function (e) {
+  if (e.key === "Escape" && modalDialog.hasClass("modal__dialog--visible")) {
+    // escape key maps to keycode '27'
+    closeModal();
+  }
+});
