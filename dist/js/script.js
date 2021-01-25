@@ -91,7 +91,7 @@ function openModal() {
 function closeModal() {
   modalOverlay.removeClass("modal__overlay--visible");
   modalDialog.removeClass("modal__dialog--visible");
-  document.getElementsByTagName("body")[0].style.overflow = "auto";
+  // document.getElementsByTagName("body")[0].style.overflow = "auto";
 }
 
 inputButton.on("click", openModal);
@@ -114,6 +114,8 @@ jQuery(function ($) {
     ) {
       // и не по его дочерним элементам
       closeModal(); // скрываем его
+    } else {
+      document.getElementsByTagName("body")[0].style.overflow = "hidden";
     }
   });
 });
