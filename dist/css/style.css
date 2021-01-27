@@ -461,11 +461,105 @@ label.invalid {
 
 .collection__link {
   font-weight: bold;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+}
+
+.collection__link:hover .collection__arrow {
+  background-color: #639df0;
+}
+
+.collection__link:hover .collection__arrow::before {
+  background-color: #639df0;
+}
+
+.collection__link:hover .collection__arrow::after {
+  background-color: #639df0;
+}
+
+.collection__link:hover .collection__arrow-block {
+  -webkit-animation: arrow-1 1s linear infinite;
+          animation: arrow-1 1s linear infinite;
 }
 
 .collection__arrow {
-  vertical-align: middle;
-  margin-left: 15px;
+  margin-left: 10px;
+  position: relative;
+  top: 24%;
+  width: 20px;
+  height: 2px;
+  background-color: #1565D8;
+  -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  left: 0;
+  display: block;
+}
+
+.collection__arrow::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: -2px;
+  right: -2px;
+  background-color: #1565D8;
+  -webkit-transform: rotate(30deg);
+      -ms-transform: rotate(30deg);
+          transform: rotate(30deg);
+}
+
+.collection__arrow::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  top: 2px;
+  right: -2px;
+  background-color: #1565D8;
+  -webkit-transform: rotate(-30deg);
+      -ms-transform: rotate(-30deg);
+          transform: rotate(-30deg);
+}
+
+.collection__arrow-block {
+  display: inline;
+  cursor: pointer;
+  position: relative;
+  width: 100px;
+  height: 50px;
+  margin: 0;
+}
+
+@-webkit-keyframes arrow-1 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 10px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+@keyframes arrow-1 {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 10px;
+  }
+
+  100% {
+    left: 0;
+  }
 }
 
 .trends {
@@ -970,8 +1064,7 @@ label.invalid {
 .subscribe:before {
   content: '';
   position: absolute;
-  background: url(../img/oval-1.svg) no-repeat left top;
-  background-size: contain;
+  background: url(../img/oval-1.svg) no-repeat left top/contain;
   height: 100%;
   width: 100%;
 }
@@ -980,8 +1073,7 @@ label.invalid {
   content: '';
   position: absolute;
   top: 0;
-  background: url(../img/oval-2.svg) no-repeat right top;
-  background-size: contain;
+  background: url(../img/oval-2.svg) no-repeat right top/contain;
   height: 100%;
   width: 100%;
 }
@@ -1326,10 +1418,6 @@ label.invalid {
     font-size: 16px;
   }
 
-  .collection__arrow {
-    display: none;
-  }
-
   .reviews {
     margin-top: 80px;
   }
@@ -1447,10 +1535,6 @@ label.invalid {
     margin-bottom: 0;
   }
 
-  .collection__arrow {
-    display: inline;
-  }
-
   .card__image-block:hover {
     -webkit-transform: none;
         -ms-transform: none;
@@ -1541,12 +1625,12 @@ label.invalid {
   }
 
   .subscribe:before {
-    background-position: -150% 0;
+    background: url(../img/oval-1.svg) no-repeat -100% 0/contain;
     height: 100%;
   }
 
   .subscribe:after {
-    background-position: 400% 100px;
+    background: url(../img/oval-2.svg) no-repeat 250% 250px/80%;
   }
 
   .subscribe-wrapper {
@@ -1922,8 +2006,7 @@ label.invalid {
   }
 
   .subscribe:before {
-    background-position: 0 top;
-    background-size: cover;
+    background: url(../img/oval-1.svg) no-repeat 200% top/cover;
   }
 
   .subscribe-wrapper {
@@ -1965,12 +2048,6 @@ label.invalid {
   .modal__dialog {
     max-width: 80%;
     width: 100%;
-  }
-}
-
-@media (max-width: 734px) {
-  .subscribe::after {
-    background: none;
   }
 }
 
@@ -2072,12 +2149,18 @@ label.invalid {
     margin-right: 0;
   }
 
-  .history__image-block {
-    max-height: 317px;
+  .history__i {
+    min-height: 317px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 
-  .history__i {
-    margin: auto;
+  .subscribe::before {
+    background: url(../img/oval-1.svg) no-repeat 100% top/cover;
+  }
+
+  .subscribe::after {
+    background: url("");
   }
 
   .subscribe-wrapper {
@@ -2276,7 +2359,7 @@ label.invalid {
   }
 
   .subscribe::before {
-    background: none;
+    background: url("");
   }
 
   .subscribe-wrapper {
@@ -2665,8 +2748,8 @@ label.invalid {
 @supports (-webkit-appearance:none){
 .mobile-btn{background-image:url(../img/mobile-menu.svg)}
 .main{background-image:url(../img/main-background.png)}
-.subscribe:before{background:url(../img/oval-1.svg) no-repeat left top}
-.subscribe:after{background:url(../img/oval-2.svg) no-repeat right top}
+.subscribe:before{background:url(../img/oval-1.svg) no-repeat left top/contain}
+.subscribe:after{background:url(../img/oval-2.svg) no-repeat right top/contain}
 }
 
  @media (max-width: 1200px){
@@ -2688,7 +2771,8 @@ label.invalid {
  @media (max-width: 992px){
 
 @supports (-webkit-appearance:none){
-
+.subscribe:before{background:url(../img/oval-1.svg) no-repeat -100% 0/contain}
+.subscribe:after{background:url(../img/oval-2.svg) no-repeat 250% 250px/80%}
 }
 
 }
@@ -2707,14 +2791,7 @@ label.invalid {
 .main{background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(220, 219, 217, 0)), to(#dcdbd9)), url(../img/main-background.png)}
 .main{background-image:-o-linear-gradient(top, rgba(220, 219, 217, 0), #dcdbd9), url(../img/main-background.png)}
 .main{background-image:linear-gradient(to bottom, rgba(220, 219, 217, 0), #dcdbd9), url(../img/main-background.png)}
-}
-
-}
-
- @media (max-width: 734px){
-
-@supports (-webkit-appearance:none){
-
+.subscribe:before{background:url(../img/oval-1.svg) no-repeat 200% top/cover}
 }
 
 }
@@ -2730,7 +2807,8 @@ label.invalid {
  @media (max-width: 576px){
 
 @supports (-webkit-appearance:none){
-
+.subscribe::before{background:url(../img/oval-1.svg) no-repeat 100% top/cover}
+.subscribe::after{background:url("")}
 }
 
 }
@@ -2741,6 +2819,7 @@ label.invalid {
 .main{background-image:-webkit-gradient(linear, left top, left bottom, from(rgba(220, 219, 217, 0)), to(#dcdbd9)), url(../img/main-background.png)}
 .main{background-image:-o-linear-gradient(top, rgba(220, 219, 217, 0), #dcdbd9), url(../img/main-background.png)}
 .main{background-image:linear-gradient(to bottom, rgba(220, 219, 217, 0), #dcdbd9), url(../img/main-background.png)}
+.subscribe::before{background:url("")}
 }
 
 }

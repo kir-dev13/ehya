@@ -2,19 +2,22 @@
     // margin-top: 15px
     background: #1565D8
     position: relative
+    // background-size: contain
     &:before
         content: ''
         position: absolute
-        background: url(../img/oval-1.svg) no-repeat left top
-        background-size: contain
+        // top: 0
+        // bottom: 0
+        background: url(../img/oval-1.svg) no-repeat left top / contain
+        // background-size: contain
+        // -webkit-background-size: contain
         height: 100%
         width: 100%
     &:after
         content: ''
         position: absolute
         top: 0
-        background: url(../img/oval-2.svg) no-repeat right top
-        background-size: contain
+        background: url(../img/oval-2.svg) no-repeat right top / contain
         height: 100%
         width: 100%
     &-wrapper

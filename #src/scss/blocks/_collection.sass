@@ -39,6 +39,64 @@
         margin-bottom: 23px
     &__link
         font-weight: bold
+        display: flex
+        justify-content: start
+        // align-items: center
+        &:hover
+            .collection
+                &__arrow
+                    background-color: lighten(#1565D8, 20%)
+                    &::before
+                        background-color: lighten(#1565D8, 20%)
+
+                    &::after
+                        background-color: lighten(#1565D8, 20%)
+
+                    &-block
+                        animation: arrow-1 1s linear infinite
+
     &__arrow
-        vertical-align: middle
-        margin-left: 15px
+        margin-left: 10px
+        position: relative
+        top: 24%
+        width: 20px
+        height: 2px
+        background-color: #1565D8
+        box-shadow: 0 3px 5px rgba(0, 0, 0, .2)
+        left: 0
+        display: block
+        &::after
+            content: ''
+            position: absolute
+            width: 10px
+            height: 2px
+            top: -2px
+            right: -2px
+            background-color: #1565D8
+            transform: rotate(30deg)
+        &::before
+            content: ''
+            position: absolute
+            width: 10px
+            height: 2px
+            top: 2px
+            right: -2px
+            background-color: #1565D8
+            transform: rotate(-30deg)
+        &-block
+            display: inline
+            cursor: pointer
+            position: relative
+            width: 100px
+            height: 50px
+            margin: 0
+
+@keyframes arrow-1
+    0%
+        left: 0
+
+    50%
+        left: 10px
+
+    100%
+        left: 0

@@ -9,11 +9,13 @@
     .subscribe
         margin-top: 5px
         &:before
-            background-position: -150% 0
+            // background-position: -150% 0
             // transform: rotateX(30deg)
+            background: url(../img/oval-1.svg) no-repeat -100% 0 / contain
             height: 100%
         &:after
-            background-position: 400% 100px
+            // background-position: 400% 100px
+            background: url(../img/oval-2.svg) no-repeat 250% 250px / 80%
         &-wrapper
             padding: 72px 0 80px
             flex-direction: column
@@ -34,8 +36,9 @@
     .subscribe
         margin-top: -3px
         &:before
-            background-position: 0 top
-            background-size: cover
+            background: url(../img/oval-1.svg) no-repeat 200% top / cover
+            // background-position: 0 top
+            // background-size: cover
         &-wrapper
             width: 80%
         &__content
@@ -47,12 +50,16 @@
             margin: auto
             flex-basis: 80%
             width: 83%
-@media ( max-width: 734px )
-    .subscribe
-        &::after
-            background: none
+// @media ( max-width: 734px )
+//     .subscribe
+//         &::after
+//             background: none
 @media ( max-width: 576px )
     .subscribe
+        &::before
+            background: url(../img/oval-1.svg) no-repeat 100% top / cover
+        &::after
+            background: url('')
         &-wrapper
             width: 100%
         &__form
@@ -71,7 +78,7 @@
     .subscribe
         margin-top: 35px
         &::before
-            background: none
+            background: url('')
         &-wrapper
             padding: 65px 0
             justify-content: start
